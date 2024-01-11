@@ -30,7 +30,7 @@ jobs:
           distribution: 'adopt'
           java-version: '17'
       - name: Setup Selenium Webdriver
-        uses: nanasess/setup-chromedriver@v1
+        uses: nanasess/setup-chromedriver@v2
       - name: Setup Selenium Webdriver settings
         run: |
           export DISPLAY=:99
@@ -61,7 +61,7 @@ jobs:
           CHROMEDRIVER: /usr/local/bin/chromedriver
         run: |
           cd Plan
-          ./gradlew build
+          ./gradlew shadowJar
       - name: tree
         run: tree
       - name: Upload Plan.jar 
