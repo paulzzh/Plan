@@ -114,7 +114,7 @@ public class BukkitSensor implements ServerSensor<World> {
     private boolean hasPaperMethod(Class<?> clazz, String methodName) {
         try {
             return clazz.getMethod(methodName) != null;
-        } catch (NoSuchMethodException e) {
+        } catch (NoSuchMethodException|NoClassDefFoundError e) {
             return false;
         }
     }
