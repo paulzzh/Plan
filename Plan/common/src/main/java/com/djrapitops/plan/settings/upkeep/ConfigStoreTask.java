@@ -59,8 +59,8 @@ public class ConfigStoreTask extends TaskSystem.Task {
     @Override
     public void run() {
         try {
-            long lastModified = files.getConfigFile().lastModified();
-            dbSystem.getDatabase().executeTransaction(new StoreConfigTransaction(serverInfo.getServerUUID(), config, lastModified));
+            // long lastModified = files.getConfigFile().lastModified();
+            // dbSystem.getDatabase().executeTransaction(new StoreConfigTransaction(serverInfo.getServerUUID(), config, lastModified));
         } finally {
             cancel();
         }
@@ -68,7 +68,7 @@ public class ConfigStoreTask extends TaskSystem.Task {
 
     @Override
     public void register(RunnableFactory runnableFactory) {
-        long delay = TimeAmount.toTicks(config.get(TimeSettings.CONFIG_UPDATE_INTERVAL), TimeUnit.MILLISECONDS) + 40;
-        runnableFactory.create(this).runTaskLaterAsynchronously(delay);
+        // long delay = TimeAmount.toTicks(config.get(TimeSettings.CONFIG_UPDATE_INTERVAL), TimeUnit.MILLISECONDS) + 40;
+        // runnableFactory.create(this).runTaskLaterAsynchronously(delay);
     }
 }
