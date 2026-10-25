@@ -86,7 +86,7 @@ subprojects {
         dependencyDownloadVersion = "1.2.1"
 
         bstatsVersion = "2.2.1"
-        placeholderapiVersion = "2.11.1"
+        placeholderapiVersion = "2.11.7"
         nkPlaceholderapiVersion = "1.4-SNAPSHOT"
 
         junitVersion = "5.8.2"
@@ -98,12 +98,13 @@ subprojects {
         mavenCentral()
         google()
         maven { url = "https://hub.spigotmc.org/nexus/content/repositories/snapshots/" } // Spigot
-        maven { url = "https://papermc.io/repo/repository/maven-public/" } // Paper
+        maven { url = "https://repo.papermc.io/repository/maven-public/" } // Paper
         maven { url = "https://repo.spongepowered.org/repository/maven-public/" } // Sponge
         maven { url = "https://oss.sonatype.org/content/repositories/snapshots" } // BungeeCord
         maven { url = "https://repo.md-5.net/content/repositories/snapshots/" } // RedisBungee
         maven { url = "https://repo.velocitypowered.com/snapshots/" } // Velocity
         maven { url = "https://repo.playeranalytics.net/releases" } // Plan
+        maven { url = "https://repo.extendedclip.com/releases/" } // PAPI
     }
 
     dependencies {
