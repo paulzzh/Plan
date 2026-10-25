@@ -31,7 +31,7 @@ jobs:
           cd Plan
           ./gradlew shadowJar
       - name: Upload Plan.jar 
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v7
         with:
           name: Plan.jar
           path: Plan/builds/*
