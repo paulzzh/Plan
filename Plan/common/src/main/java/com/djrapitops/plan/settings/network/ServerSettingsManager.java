@@ -121,10 +121,10 @@ public class ServerSettingsManager implements SubSystem {
     }
 
     private void scheduleDBCheckTask() {
-        long checkPeriod = TimeAmount.toTicks(config.get(TimeSettings.CONFIG_UPDATE_INTERVAL), TimeUnit.MILLISECONDS);
+        // long checkPeriod = TimeAmount.toTicks(config.get(TimeSettings.CONFIG_UPDATE_INTERVAL), TimeUnit.MILLISECONDS);
 
-        runnableFactory.create(() -> checkDBForNewConfigSettings(dbSystem.getDatabase()))
-                .runTaskTimerAsynchronously(checkPeriod, checkPeriod);
+        // runnableFactory.create(() -> checkDBForNewConfigSettings(dbSystem.getDatabase()))
+        //         .runTaskTimerAsynchronously(checkPeriod, checkPeriod);
     }
 
     private void checkDBForNewConfigSettings(Database database) {
